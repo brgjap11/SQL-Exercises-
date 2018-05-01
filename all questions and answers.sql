@@ -56,7 +56,7 @@ FROM actor
 GROUP BY last_name
 HAVING COUNT(last_name) >= 2 ;
 
-#4c. Oh, no! The actor HARPO WILLIAMS was accidentally entered in the actor table as GROUCHO WILLIAMS, the name of Harpo's second cousin's husband's yoga teacher. Write a query to fix the record.
+#4c.Oh, no! The actor HARPO WILLIAMS was accidentally entered in the actor table as GROUCHO WILLIAMS, the name of Harpos second cousin's husband's yoga teacher. Write a query to fix the record.
 UPDATE actor
 SET first_name = 'HARPO' #actor_id = 172
 WHERE actor_id = 172; 
@@ -137,7 +137,7 @@ WHERE country.country= 'Canada';
 SELECT film.title, category.name, film.description FROM film_category
 JOIN film ON film_category.film_id = film.film_id
 JOIN category ON category.category_id = film_category.category_id
-WHERE category.name = 'family' ;
+WHERE category.name = 'family';
 
 #7e. Display the most frequently rented movies in descending order.
 SELECT film.title, COUNT(rental.rental_id) AS Times_Rented FROM film
